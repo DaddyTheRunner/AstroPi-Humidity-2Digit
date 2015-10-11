@@ -1,7 +1,7 @@
 from Astro_Pi_Sim import AstroPiSim
 import time
-import logging
-from datetime import datetime
+#import logging
+#from datetime import datetime
 
 
 ap = AstroPiSim()
@@ -13,9 +13,9 @@ space = [
 e,e,e,e,e,e,e,e,
 e,e,e,e,e,e,e,e,
 ]
-tmstmp = time.strftime("%Y%m%d-%H%M%S")
-logging.basicConfig(format='%(asctime)s %(message)s',filename='humidity'+str(tmstmp)
-+'.log',level=logging.DEBUG)
+#tmstmp = time.strftime("%Y%m%d-%H%M%S")
+#logging.basicConfig(format='%(asctime)s %(message)s',filename='humidity'+str(tmstmp)
+#+'.log',level=logging.DEBUG)
 
 def numToMatrix(num):
 
@@ -109,7 +109,7 @@ for count in range(10):
     hum_f = ap.get_humidity()
     hum_int = int(hum_f)
 # test to see if value is higher or lower than previous, and then set led colour appropriately 
-    logging.info(hum_f)
+#    logging.info(hum_f)
     if hum_int > hum_prev:
         r = [0,255,0] # green if higher
     elif hum_int == hum_prev:
